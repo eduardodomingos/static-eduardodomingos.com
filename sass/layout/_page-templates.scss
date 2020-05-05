@@ -1,0 +1,21 @@
+#content {
+    display: grid;
+
+    .page-template-default & {
+        grid-template-areas:
+        'main';
+    }
+
+    .page-template-sidebar & {
+        grid-template-areas:
+        'main'
+        'sidebar';
+        grid-gap: rem($grid-gap);
+        grid-template-columns: minmax(0, 1fr);
+        @include mq($from: desktop) {
+            grid-template-columns: $main-content-width $sidebar-width;
+            grid-template-areas:
+            'main sidebar'; 
+        }
+    }
+}

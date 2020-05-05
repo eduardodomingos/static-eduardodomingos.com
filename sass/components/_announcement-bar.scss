@@ -1,0 +1,14 @@
+#announcement-bar {
+    height: $announcement-bar-height;
+    a {
+        background-color: $color-lightning-yellow;
+        color: $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        @include attention() {
+            opacity: .7;
+        }
+    }
+}

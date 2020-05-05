@@ -1,0 +1,41 @@
+// Colors
+$color-emperor: #555;
+$color-lightning-yellow: #FFBF11;
+$color-white: #FFFFFF;
+
+// Fonts
+$roboto: 'Roboto', sans-serif;
+
+// Layout
+$rem-baseline: 10px;
+$grid-gap: 40px;
+$main-content-width: minmax(0, 2fr);
+$sidebar-width: minmax(0, 1fr);
+$mq-breakpoints: (
+    mobile:  576px,
+    tablet:  768px,
+    desktop: 992px
+);
+$container-mw-mobile: 540px;
+$container-mw-tablet: 720px;
+$container-mw-desktop: 990px;
+
+// Sizes
+$announcement-bar-height: 40px;
+$masthead-height-mobile: 70px;
+
+// Hamburger
+$hamburger-types: (
+    spin-r
+);
+
+$hamburger-padding-x           : 13px;
+$hamburger-padding-y           : 14px;
+$hamburger-layer-width         : 25px;
+$hamburger-layer-height        : 2px;
+$hamburger-layer-spacing       : 6px;
+$hamburger-layer-color         : $color-emperor;
+$hamburger-layer-border-radius : 0;
+$hamburger-hover-opacity       : 0.7;
+$hamburger-active-layer-color  : $hamburger-layer-color;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity;

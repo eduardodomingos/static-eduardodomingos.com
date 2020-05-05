@@ -1,0 +1,12 @@
+#masthead {
+    > .container {
+        height: $masthead-height-mobile;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include mq($from: tablet) {
+            justify-content: space-between;
+        }
+    }
+}  
