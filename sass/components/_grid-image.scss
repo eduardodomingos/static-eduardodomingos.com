@@ -1,0 +1,61 @@
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    &+.grid {
+        margin-top: $grid-gap-small;
+    }
+
+    %grid-image {
+        flex: 0 auto;
+        margin: 0 auto;
+        width: 100%;
+        &:not(:last-child){
+            padding: 0 0 $grid-gap-small;
+        }
+        @include mq($from: tablet) {
+            &:not(:last-child){
+                padding: 0 $grid-gap-small 0 0;
+            }
+        }
+    } 
+
+    // register all possible ratios
+    .grid-image,
+    .grid-image--aspect3x2,
+    .grid-image--aspect2x3,
+    .grid-image--aspect8x10,
+    .grid-image--aspect16x9,
+    .grid-image--aspect1x1 {
+        @extend %grid-image;
+    }
+
+    .grid-image--aspect3x2 {
+        @include mq($from: tablet) {
+          flex: 1.5 0%;
+        }
+    }
+    
+    .grid-image--aspect2x3 {
+        @include mq($from: tablet) {
+          flex: .666667 0%;
+        }
+    }
+    
+    .grid-image--aspect8x10 {
+        @include mq($from: tablet) {
+          flex: .8 0%;
+        }
+    }
+
+    .grid-image--aspect16x9 {
+        @include mq($from: tablet) {
+          flex: 1.7777777778 0%;
+        }
+    }
+
+    .grid-image--aspect1x1 {
+        @include mq($from: tablet) {
+          flex: 1 0%;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+#hero {
+    max-height: calc(100vh - #{$announcement-bar-height} - #{$masthead-height});
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}

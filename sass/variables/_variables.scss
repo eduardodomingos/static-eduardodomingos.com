@@ -1,5 +1,6 @@
 // Colors
-$color-emperor: #555;
+$color-emperor: #555555;
+$color-athens-gray: #EAECEF;
 $color-lightning-yellow: #FFBF11;
 $color-white: #FFFFFF;
 
@@ -9,6 +10,7 @@ $roboto: 'Roboto', sans-serif;
 // Layout
 $rem-baseline: 10px;
 $grid-gap: 40px;
+$grid-gap-small: 20px;
 $main-content-width: minmax(0, 2fr);
 $sidebar-width: minmax(0, 1fr);
 $mq-breakpoints: (
@@ -22,7 +24,7 @@ $container-mw-desktop: 990px;
 
 // Sizes
 $announcement-bar-height: 40px;
-$masthead-height-mobile: 70px;
+$masthead-height: 70px;
 
 // Hamburger
 $hamburger-types: (

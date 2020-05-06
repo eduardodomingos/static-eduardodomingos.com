@@ -1,5 +1,6 @@
 #main-nav {
     font-size: rem(14px);
+    
     > ul {
         display: none;
         @include mq($from: tablet) {
@@ -10,13 +11,31 @@
             }
             li {
                 @include attention() {
-                    a {
+                    & > a {
                         opacity: 1;
                     }
                 }
                 &.active a {
                     font-weight: 700;
                     opacity: 1;
+                }
+                &.menu-item-has-children {
+                    position: relative;
+                    @include attention() {
+                        ul {
+                            display: block;
+                        }
+                    }
+                    ul {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background: rgba($color-white, .85);
+                        a {
+                            display: inline-block;
+                        }
+                    }
                 }
             }
         }

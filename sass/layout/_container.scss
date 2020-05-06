@@ -5,6 +5,7 @@
 
     @include mq($from: tablet) {
         max-width: rem($container-mw-tablet);
+        padding: 0;
     }
     @include mq($from: desktop) {
         max-width: rem($container-mw-desktop);

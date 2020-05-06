@@ -9,7 +9,7 @@
     <link href="dist/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-template-default">
+<body class="page-template-hero-no-sidebar">
     <div id="announcement-bar">
         <a href="#">FREE eBook Available!!</a>
     </div>
@@ -24,8 +24,13 @@
                     <li class="active">
                         <a href="/">Home</a>
                     </li>
-                    <li>
+                    <li class="menu-item-has-children">
                         <a href="/portfolio">Portfolio</a>
+                        <ul>
+                            <li><a href="/portfolio/portugal">Portugal</a></li>
+                            <li><a href="/portfolio/spain">Spain</a></li>
+                            <li><a href="/portfolio/usa">USA</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="/about">About</a>
@@ -47,7 +52,49 @@
         </div>
     </header>
     <div id="content">
-        <main id="main-content"></main>
+        <div id="hero">
+            <figure>
+                <picture>
+                    <img src="assets/img/home-featured-image.jpg" alt="Me shooting a mountain landscape on top of a rock.">
+                </picture>
+                <figcaption class="screen-reader-text">Me shooting a mountain landscape on top of a rock.</figcaption>
+            </figure>
+        </div>
+        <main id="main-content">
+            <section class="band">
+                <div class="container">
+                    <div class="featured-list">
+                        <h1 class="featured-list-title">Recent Shots</h1>
+                        <!-- <div class="grid">
+                            <figure class="grid-image--aspect8x10">
+                                <img src="assets/img/portfolio/img-1-8x10.jpg" alt="">
+                            </figure>
+                            <figure class="grid-image--aspect16x9">
+                                <img src="assets/img/portfolio/img-2-16x9.jpg" alt="">
+                            </figure>
+                            <figure class="grid-image--aspect3x2">
+                                <img src="assets/img/portfolio/img-3-3x2.jpg" alt="">
+                            </figure>
+                        </div> -->
+                        <div class="grid">
+                            <figure class="grid-image--aspect3x2">
+                                <img src="assets/img/portfolio/img-4-3x2.jpg" alt="">
+                            </figure>
+                            <figure class="grid-image--aspect3x2">
+                                <img src="assets/img/portfolio/img-5-3x2.jpg" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="band">
+                <div class="container">
+                    <div class="featured-list">
+                        <h1 class="featured-list-title">Featured Articles</h1>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
     <footer id="colophon"></footer>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
