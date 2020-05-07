@@ -12,6 +12,15 @@ body {
     color: $color-emperor;
 }
 
-/* a {
+a {
     transition: all .4s ease-in-out;
-} */
+    @include attention() {
+        opacity: .75;
+    }
+} 
+
+@include headings() {
+    color: $color-shark;
+    font-weight: 700;
+    text-transform: uppercase;
+}
