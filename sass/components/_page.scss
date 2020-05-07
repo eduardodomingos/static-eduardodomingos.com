@@ -1,0 +1,5 @@
+body {
+    &.masthead-is-fixed {
+        padding-top: rem($masthead-height);
+    }
+}

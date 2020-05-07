@@ -5,10 +5,20 @@
     h1 {
         font-weight: 700;
         font-size: rem(18px);
+        transition: all .4s ease-in-out;
     }
     h2 {
         font-size: rem(15px);
         font-weight: 300;
         text-transform: capitalize;
+        transition: all .4s ease-in-out;
+    }
+    .masthead-is-collapsed & {
+        h1 {
+            font-size: rem(15px);
+        }
+        h2 {
+            font-size: rem(13px);
+        }
     }
 }

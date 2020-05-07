@@ -1,17 +1,66 @@
 (function($) {
     $(document).ready(function(){
         var dom = {
-            // $window: $(window),
+            $window: $(window),
             // $document: $(document),
-            //$body: $('body'),
+            $body: $('body'),
             // $header: $('#masthead'),
-            $menu_toggle: $('#menu-toggle'),
+            $menuToggle: $('#menu-toggle'),
+            $announcementBar: $('#announcement-bar')
             // $megamenu: $('#mega-menu'),
             // $site_content: $('#site-content')
         };
 
-        dom.$menu_toggle.click(function(){
-            dom.$menu_toggle.toggleClass('is-active');
+        var announcementBarHeight;
+        var viewportHeight;
+
+        /*
+         * Menu Toggling
+         */
+        dom.$menuToggle.click(function(){
+            dom.$menuToggle.toggleClass('is-active');
         });
+
+        /*
+         * Collapsed Header
+         */
+        function getBodyScrollTop () { 
+            var el = document.scrollingElement || document.documentElement;
+            return el.scrollTop; 
+        }
+
+        function headerManager(bodyScrollTop) {
+            if (bodyScrollTop > announcementBarHeight) {
+                dom.$body.addClass('masthead-is-fixed');
+            } else {
+                dom.$body.removeClass('masthead-is-fixed');
+            }
+            if (bodyScrollTop > (viewportHeight / 2)) {
+                dom.$body.addClass('masthead-is-collapsed');
+            } else {
+                dom.$body.removeClass('masthead-is-collapsed');
+            }
+        }
+    
+        dom.$window.scroll(function() {
+            headerManager(getBodyScrollTop());
+        });
+
+        /*
+         * Init
+         */
+        (function init() {
+            announcementBarHeight = dom.$announcementBar.outerHeight();
+            viewportHeight =  window.innerHeight;
+            headerManager(getBodyScrollTop());
+        })();
+
+        /*
+         * Resize Event
+         */
+        $(window).resize(function() {
+            viewportHeight =  window.innerHeight;
+        });
+
     });
 }(jQuery));

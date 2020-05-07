@@ -4,6 +4,7 @@
     color: $color-white;
     font-size: rem(12px);
     line-height: 1.6;
+    position: relative;
     @include mq($from: tablet) {
         padding: rem(10px 0);
     }

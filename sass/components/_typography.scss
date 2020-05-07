@@ -13,7 +13,7 @@ body {
 }
 
 a {
-    transition: all .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
     @include attention() {
         opacity: .75;
     }
