@@ -33,7 +33,7 @@
         top: 50%;
         right: 0;
         transform: translateY(-50%);
-        @include mq($from: tablet) {
+        @include mq($from: desktop) {
             display: none;
         }
     }

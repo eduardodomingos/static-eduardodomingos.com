@@ -4,9 +4,10 @@
             $window: $(window),
             // $document: $(document),
             $body: $('body'),
-            // $header: $('#masthead'),
+            $header: $('#masthead'),
             $menuToggle: $('#menu-toggle'),
-            $announcementBar: $('#announcement-bar')
+            $announcementBar: $('#announcement-bar'),
+            $offcanvas: $('#offcanvas')
             // $megamenu: $('#mega-menu'),
             // $site_content: $('#site-content')
         };
@@ -21,12 +22,21 @@
             dom.$menuToggle.toggleClass('is-active');
             dom.$body.toggleClass('offcanvas-is-open');
             if(dom.$body.hasClass('offcanvas-is-open')) {
+                offcanvasPosition();
                 dom.$body.css( 'overflow', 'hidden' );
             }
             else {
                 dom.$body.css( 'overflow', '' );
             }
         });
+
+        function offcanvasPosition() {
+            var offcanvasOffsetTop = (dom.$header.offset().top - dom.$window.scrollTop()) + dom.$header.outerHeight();
+            dom.$offcanvas.css({
+                'top' : offcanvasOffsetTop,
+                'height' : window.innerHeight - offcanvasOffsetTop
+            });
+        }
 
         /*
          * Collapsed Header
@@ -67,7 +77,15 @@
          */
         $(window).resize(function() {
             viewportHeight =  window.innerHeight;
+            if(dom.$body.hasClass('offcanvas-is-open')) {
+                offcanvasPosition();
+                dom.$body.css( 'overflow', 'hidden' );
+            }
+            if(parseInt(dom.$header.find('>.container').css('width'), 10) >= 990 && dom.$body.hasClass('offcanvas-is-open')) {
+                dom.$body.removeClass('offcanvas-is-open');
+                dom.$menuToggle.removeClass('is-active');
+                dom.$body.css( 'overflow', '' );
+            }
         });
-
     });
 }(jQuery));

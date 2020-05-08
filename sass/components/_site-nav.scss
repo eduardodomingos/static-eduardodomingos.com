@@ -2,10 +2,11 @@
     font-size: rem(14px);
     a {
         opacity: .75;
+        display: inline-block;
     }
     li {
         @include attention() {
-            a {
+            & > a {
                 opacity: 1;
             }
         }
@@ -16,8 +17,31 @@
     }
     #masthead & {
         display: none;
-        @include mq($from: tablet) {
+        @include mq($from: desktop) {
             display: block;
+            > ul {
+                display: flex;
+                a {
+                    padding: rem(10px 8px);
+                }
+                li {
+                    &.menu-item-has-children {
+                        position: relative;
+                        @include attention() {
+                            ul {
+                                display: block;
+                            }
+                        }
+                        ul {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            background: rgba($color-white, .95);
+                        }
+                    }
+                }
+            }
         }
     }
     #offcanvas & {

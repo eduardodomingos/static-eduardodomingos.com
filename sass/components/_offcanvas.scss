@@ -1,14 +1,13 @@
 #offcanvas {
     background-color: rgba($color-white, .95);
     position: fixed;
-    top: rem($announcement-bar-height + $masthead-height);
     right: 0;
     z-index: 999;
     transform: translateX(100%);
-    transition: all .4s ease-in-out;
-    height: calc(100vh - #{rem($announcement-bar-height + $masthead-height)});
+    transition: transform .4s ease-in-out;
     width: 100vw;
     padding: rem(20px);
+    overflow: auto;
     .offcanvas-is-open & {
         transform: translateX(0);
     }
