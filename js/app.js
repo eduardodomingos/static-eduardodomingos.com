@@ -19,6 +19,13 @@
          */
         dom.$menuToggle.click(function(){
             dom.$menuToggle.toggleClass('is-active');
+            dom.$body.toggleClass('offcanvas-is-open');
+            if(dom.$body.hasClass('offcanvas-is-open')) {
+                dom.$body.css( 'overflow', 'hidden' );
+            }
+            else {
+                dom.$body.css( 'overflow', '' );
+            }
         });
 
         /*
