@@ -1,0 +1,14 @@
+%container,
+.container {
+    max-width: rem($container-width);
+    @include center-block;
+    padding: rem(0 15px);
+
+    @include mq($from: tablet) {
+        max-width: rem($container-width--tablet);
+        padding: 0;
+    }
+    @include mq($from: desktop) {
+        max-width: rem($container-width--desktop);
+    }
+}

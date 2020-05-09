@@ -3,6 +3,7 @@ $bg: 'bg';
 $text: 'text';
 $link: 'link';
 $hover: 'hover';
+$border: 'border';
 
 //themes
 $themes: (
@@ -10,12 +11,14 @@ $themes: (
         bg: $bg--light,
         text: $text--light,
         link: $brand--blue--light,
-        hover: $hover--light
+        hover: $hover--light,
+        border: $border--light
     ),
     dark: (
         bg: $bg--dark,
         text: $text--dark,
         link: $brand--blue--dark,
-        hover: $hover--dark
+        hover: $hover--dark,
+        border: $border--dark
     )
 );

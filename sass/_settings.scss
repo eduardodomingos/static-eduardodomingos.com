@@ -4,7 +4,7 @@ $font-family--title: 'Roboto', sans-serif;
 
 //layout
 $announcement-height: rem(40px);
-$header-height: 70px;
+$header-height: rem(70px);
 $header-height--collapsed: 50px;
 $hamburger-padding-x: 13px;
 $hamburger-padding-y: 14px;
@@ -36,10 +36,11 @@ $spacer--icon: 5px;
 
 //text
 $font-size--base: rem(16px);
-$font-size--secondary: 18px;
-$font-size--tertiary: 14px;
+$font-size--secondary: rem(18px);
+$font-size--tertiary: rem(14px);
 $font-size--base--mobile: $font-size--base - 1;
 
+$font-weight--light: 300;
 $font-weight--regular: 400;
 $font-weight--semibold: 500;
 $font-weight--bold: 700;
@@ -51,6 +52,7 @@ $line-height--quote: 1.3;
 %title-text {
     font-family: $font-family--title;
     font-weight: $font-weight--bold;
+    text-transform: uppercase;
 }
 
 //--colors
@@ -63,8 +65,8 @@ $bg--dark: #272b38;
 $bg--announcement: #FFBF11;
 $text--light: #000; 
 $text--dark: #fff;
-$border--light: #000;
-$border--dark: #fff;
+$border--light: transparentize(#000, .9);
+$border--dark: transparentize(#fff, .9);
 $hover--light: transparentize($brand--blue--light, .1);
 $hover--dark: transparentize($brand--blue--dark, .1);
 

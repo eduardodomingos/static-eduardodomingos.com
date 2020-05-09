@@ -7,7 +7,10 @@ $rem-baseline: 10px;
 @import 'normalize';
 @import 'reset';
 @import 'base';
-// @import 'nav';
+@import 'layout';
+@import 'header';
+@import 'hamburgers/hamburgers';
+
 // @import 'portfolio';
 // @import 'portfolio-page';
 // @import 'resume';
