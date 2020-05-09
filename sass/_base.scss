@@ -1,0 +1,48 @@
+html {
+    @include rem-baseline;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size--base;
+    line-height: $line-height--base;
+    font-weight: $font-weight--regular;
+}
+
+a {
+    @include themed() {
+        color: t('link');
+    }
+    @include attention() {
+        @include themed() {
+            color: t('hover');
+        }
+    }
+}
+
+.base {
+    @include themed() {
+        color: t('text');
+        background: t('bg');
+    }
+}
+
+.announcement {
+    background-color: $bg--announcement;
+    height: $announcement-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        color: $text--dark;
+        @include attention() {
+            color: transparentize($text--dark, .15);
+        }
+    }
+}
+
+

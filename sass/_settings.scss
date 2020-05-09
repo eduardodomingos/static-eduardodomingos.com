@@ -1,0 +1,73 @@
+//vars
+$font-family: 'Roboto', sans-serif;
+$font-family--title: 'Roboto', sans-serif;
+
+//layout
+$announcement-height: rem(40px);
+$header-height: 70px;
+$header-height--collapsed: 50px;
+$hamburger-padding-x: 13px;
+$hamburger-padding-y: 14px;
+$hamburger-layer-width: 25px;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 6px;
+$hamburger-layer-border-radius: 0;
+$hamburger-hover-opacity: 0.7;
+$hamburger-types: (spin-r);
+$content-width: minmax(0, 2fr);
+$sidebar-width: minmax(0, 1fr);
+$mq-breakpoints: (
+    mobile:  576px,
+    tablet:  768px,
+    desktop: 992px
+);
+$container-width: 540px;
+$container-width--tablet: 720px;
+$container-width--desktop: 990px;
+
+//spacers
+$spacer--largest: 120px;
+$spacer--large: 65px;
+$spacer--default: 50px;
+$spacer--medium: ($spacer--default * .8);
+$spacer--small: ($spacer--default / 2);
+$spacer--smallest: ($spacer--small / 3);
+$spacer--icon: 5px;
+
+//text
+$font-size--base: rem(16px);
+$font-size--secondary: 18px;
+$font-size--tertiary: 14px;
+$font-size--base--mobile: $font-size--base - 1;
+
+$font-weight--regular: 400;
+$font-weight--semibold: 500;
+$font-weight--bold: 700;
+
+$line-height--base: 1.6;
+$line-height--title: 1.1;
+$line-height--quote: 1.3;
+
+%title-text {
+    font-family: $font-family--title;
+    font-weight: $font-weight--bold;
+}
+
+//--colors
+// $brand--red: #b45139;
+// $brand--red--dark: lighten($brand--red, 10%);
+$brand--blue--light: #4376A3;
+$brand--blue--dark: lighten($brand--blue--light, 18%);
+$bg--light: #F5F4F3;
+$bg--dark: #272b38;
+$bg--announcement: #FFBF11;
+$text--light: #000; 
+$text--dark: #fff;
+$border--light: #000;
+$border--dark: #fff;
+$hover--light: transparentize($brand--blue--light, .1);
+$hover--dark: transparentize($brand--blue--dark, .1);
+
+
+//--other
+$rounded: 3px;

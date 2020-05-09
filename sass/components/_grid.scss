@@ -1,8 +1,0 @@
-.grid {
-    display: grid;
-    display: grid;
-    grid-gap: rem($grid-gap-small);
-    @include mq($from: tablet) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}

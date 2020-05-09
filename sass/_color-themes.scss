@@ -1,0 +1,21 @@
+//shortcuts
+$bg: 'bg';
+$text: 'text';
+$link: 'link';
+$hover: 'hover';
+
+//themes
+$themes: (
+    default: (
+        bg: $bg--light,
+        text: $text--light,
+        link: $brand--blue--light,
+        hover: $hover--light
+    ),
+    dark: (
+        bg: $bg--dark,
+        text: $text--dark,
+        link: $brand--blue--dark,
+        hover: $hover--dark
+    )
+);
