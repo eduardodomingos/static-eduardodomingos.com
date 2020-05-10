@@ -5,23 +5,25 @@
             $document: $(document),
             $body: $('body'),
             $header: $('.header'),
-            $navbar: $('.navbar'),
+            $offcanvas: $('.offcanvas'),
             $hamburger: $('.hamburger')
         };
 
         (function init() {
-            calcNavbarPosition();
+            // if(dom.$window.width() < 992) {
+            //     calcNavbarPosition();
+            // }
             dom.$hamburger.click(function(){
                 $(this).toggleClass('is-active');
-                dom.$body.toggleClass('navbar-is-open');
+                dom.$body.toggleClass('offcanvas-is-open');
                 calcNavbarPosition();
             });
         })();
 
         function calcNavbarPosition() {
             var navbarOffsetTop = (dom.$header.offset().top - dom.$window.scrollTop()) + dom.$header.outerHeight();
-            dom.$navbar.css({
-                'top' : dom.$header.outerHeight(),
+            dom.$offcanvas.css({
+                'top' : navbarOffsetTop,
                 'height' : window.innerHeight - navbarOffsetTop
             }); 
         }

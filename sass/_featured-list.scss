@@ -1,0 +1,9 @@
+.featured-list {
+    &__items {
+        display: grid;
+        grid-gap: rem(15px);
+        @include mq($from: desktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

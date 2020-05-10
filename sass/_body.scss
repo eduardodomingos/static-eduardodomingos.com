@@ -1,0 +1,7 @@
+.body {
+    &__main {
+        > *:not(:last-child) {
+            padding-bottom: rem(40px);
+        }
+    }
+}

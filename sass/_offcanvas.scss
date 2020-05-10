@@ -1,0 +1,44 @@
+.offcanvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    backdrop-filter: saturate(180%) blur(8px);
+    transform: translateX(100%);
+    transition: transform .4s ease-in-out;
+    @include themed() {
+        border-top: rem(1px solid transparentize(t('text'), .9));
+        background: transparentize(t('bg'), .1);
+    }
+    .offcanvas-is-open & {
+        transform: translateX(0);
+    }
+
+    .navbar {
+        > ul {
+            li {
+                @include themed() {
+                    border-top: rem(1px solid transparentize(t('text'), .9));
+                }
+            }
+            > li {
+                &:first-child() {
+                    border-top: 0;
+                }
+            }
+            ul {
+                padding-left: rem(25px);
+            }
+        }
+        a {
+            padding: rem(8px);
+            display: block;
+            @include themed() {
+                color: t('text');
+                @include attention() {
+                    color: transparentize(t('text'), .15);
+                }
+            }
+        }
+    }
+}

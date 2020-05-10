@@ -1,5 +1,4 @@
-%container,
-.container {
+@mixin container {
     max-width: rem($container-width);
     @include center-block;
     padding: rem(0 15px);
@@ -11,4 +10,8 @@
     @include mq($from: desktop) {
         max-width: rem($container-width--desktop);
     }
+}
+
+.container {
+    @include container;
 }
